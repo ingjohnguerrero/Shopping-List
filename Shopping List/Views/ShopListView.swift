@@ -9,14 +9,28 @@
 import SwiftUI
 
 struct ShopListView: View {
+    var availableItems : [ShopItem]
+    @State private var cartItems: [Int: ShopItem] = [:]
     var body: some View {
         NavigationView {
-            List{
-                ShoppingRowView()
-                ShoppingRowView()
+            List(availableItems) { item in
+                ShoppingRowView(inCart: self.inCart(shopItem: item), shopItem: item)
+                    .onTapGesture {
+                        self.toggleCartItem(shopItem: item)
+                }
             }
             .navigationBarTitle(Text("The Shop"))
             .navigationBarItems(trailing: CartView())
+        }
+    }
+    private func inCart(shopItem: ShopItem) -> Bool {
+        return cartItems[shopItem.id] != nil
+    }
+    private func toggleCartItem(shopItem: ShopItem) {
+        if cartItems[shopItem.id] == nil {
+            cartItems[shopItem.id] = shopItem
+        } else {
+            cartItems[shopItem.id] = nil
         }
     }
 }
@@ -32,6 +46,6 @@ struct CartView: View {
 
 struct ShopListView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopListView()
+        return ShopListView(availableItems: ShopItem.generateFake(withQuantity: 10))
     }
 }
