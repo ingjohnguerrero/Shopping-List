@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C15C23AB239E5BD30023FFA0 /* ShopItemModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C23AA239E5BD30023FFA0 /* ShopItemModelTests.swift */; };
 		C183D92523A5A5B9009F0A2B /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C183D92423A5A5B9009F0A2B /* ShopItem.swift */; };
+		C183D92823A5AC5C009F0A2B /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = C183D92723A5AC5C009F0A2B /* Fakery */; };
 		C1C9BE73239DDE9200395C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BE72239DDE9200395C7E /* AppDelegate.swift */; };
 		C1C9BE75239DDE9200395C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BE74239DDE9200395C7E /* SceneDelegate.swift */; };
 		C1C9BE77239DDE9200395C7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BE76239DDE9200395C7E /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C183D92823A5AC5C009F0A2B /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,9 @@
 			dependencies = (
 			);
 			name = "Shopping List";
+			packageProductDependencies = (
+				C183D92723A5AC5C009F0A2B /* Fakery */,
+			);
 			productName = "Shopping List";
 			productReference = C1C9BE6F239DDE9200395C7E /* Shopping List.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +257,9 @@
 				Base,
 			);
 			mainGroup = C1C9BE66239DDE9200395C7E;
+			packageReferences = (
+				C183D92623A5AC5C009F0A2B /* XCRemoteSwiftPackageReference "Fakery" */,
+			);
 			productRefGroup = C1C9BE70239DDE9200395C7E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -628,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C183D92623A5AC5C009F0A2B /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C183D92723A5AC5C009F0A2B /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C183D92623A5AC5C009F0A2B /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1C9BE67239DDE9200395C7E /* Project object */;
 }

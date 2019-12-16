@@ -12,7 +12,7 @@ import XCTest
 
 class ShopItemModelTests: XCTestCase {
     
-    var sut = ShopItem(id: 0, name: "Nike shoes", price: 100.0)
+    var sut = ShopItem(id: 5, name: "Nike shoes", price: 100.0)
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,7 +23,7 @@ class ShopItemModelTests: XCTestCase {
     }
 
     func test_instance_with_id() {
-        XCTAssertEqual(0, sut.id)
+        XCTAssertEqual(5, sut.id)
     }
     
     func test_instance_with_name() {
@@ -33,4 +33,15 @@ class ShopItemModelTests: XCTestCase {
     func test_instance_with_price() {
         XCTAssertEqual(100.0 , sut.price)
     }
+    
+    func test_generate_fake_items() {
+        let shopItems = ShopItem.generateFake(withQuantity: 10)
+        XCTAssertEqual(shopItems.count, 10)
+    }
+    
+    func test_faker_name_not_empty() {
+        let shopItem = ShopItem.generateFake(withQuantity: 1).first!
+        XCTAssertFalse(shopItem.name.isEmpty)
+    }
+    
 }

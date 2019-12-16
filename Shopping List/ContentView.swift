@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ShopListView()
+        ShopListView(availableItems: ShopItem.generateFake(withQuantity: 30))
     }
 }
 
