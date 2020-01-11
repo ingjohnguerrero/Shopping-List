@@ -20,7 +20,7 @@ struct ShopListView: View {
                 }
             }
             .navigationBarTitle(Text("The Shop"))
-            .navigationBarItems(trailing: CartView())
+            .navigationBarItems(trailing: CartView(cartItems: cartItems.count))
         }
     }
     private func inCart(shopItem: ShopItem) -> Bool {
@@ -32,15 +32,6 @@ struct ShopListView: View {
         } else {
             cartItems[shopItem.id] = nil
         }
-    }
-}
-
-struct CartView: View {
-    var body: some View {
-        Image(systemName: "cart")
-            .resizable()
-            .aspectRatio(1, contentMode: .fill)
-            .frame(maxWidth: 50)
     }
 }
 
