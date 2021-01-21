@@ -20,6 +20,7 @@
 		C1C9BE95239DDE9600395C7E /* Shopping_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BE94239DDE9600395C7E /* Shopping_ListUITests.swift */; };
 		C1C9BEA6239DE28000395C7E /* ShoppingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BEA5239DE28000395C7E /* ShoppingRowView.swift */; };
 		C1C9BEA8239DE68900395C7E /* ShopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BEA7239DE68900395C7E /* ShopListView.swift */; };
+		C1D8586223A88B2D00293424 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8586123A88B2D00293424 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C1C9BE96239DDE9600395C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C9BEA5239DE28000395C7E /* ShoppingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRowView.swift; sourceTree = "<group>"; };
 		C1C9BEA7239DE68900395C7E /* ShopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListView.swift; sourceTree = "<group>"; };
+		C1D8586123A88B2D00293424 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				C1C9BEA5239DE28000395C7E /* ShoppingRowView.swift */,
 				C1C9BEA7239DE68900395C7E /* ShopListView.swift */,
+				C1D8586123A88B2D00293424 /* CartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C9BE73239DDE9200395C7E /* AppDelegate.swift in Sources */,
+				C1D8586223A88B2D00293424 /* CartView.swift in Sources */,
 				C1C9BE75239DDE9200395C7E /* SceneDelegate.swift in Sources */,
 				C183D92523A5A5B9009F0A2B /* ShopItem.swift in Sources */,
 				C1C9BE77239DDE9200395C7E /* ContentView.swift in Sources */,
